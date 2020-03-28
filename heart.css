@@ -1,0 +1,76 @@
+.separator {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
+
+.heart-container {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-color: #ffe6f0;
+  align-items: center;
+  justify-content: center;
+  animation-name: beat-bckgrd;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+.left-part {
+  position: relative;
+  width: 7.5em;
+  height: 5em;
+  background-color: pink;
+  border-radius: 3em 0 0 3em;
+  transform: rotate(45deg);
+  left: 2.15em;
+  animation-name: left;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+
+.right-part {
+  position: relative;
+  width: 7.5em;
+  height: 5em;
+  background-color: pink;
+  border-radius: 0 3em 3em 0;
+  transform: rotate(-45deg);
+  right: 2.15em;
+  animation-name: right;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left {
+  0% {
+    background-color: #ff0066;
+    transform: scale(1.8) rotate(45deg);
+  }
+  100% {
+    background-color: #e6005c;
+    transform: scale(1.3) rotate(45deg);
+    left: 2.6em;
+  }
+}
+
+@keyframes right {
+  0% {
+    background-color: #ff0066;
+    transform: scale(1.8) rotate(-45deg);
+  }
+  100% {
+    background-color: #e6005c;
+    transform: scale(1.3) rotate(-45deg);
+    right: 2.6em;
+  }
+}
+
+@keyframes beat-bckgrd {
+  0% {
+    background-color: #ffe6f0;
+  }
+  50% {
+    background-color: #ffcce0;
+  }
+}
